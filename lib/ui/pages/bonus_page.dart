@@ -81,7 +81,7 @@ class BonusPage extends StatelessWidget {
           ],
         ),
       );
-    }
+    } // bonusCard Widget
 
     // Headline Widget
     Widget headline() {
