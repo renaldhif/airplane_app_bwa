@@ -9,12 +9,14 @@ class SignUpPage extends StatelessWidget {
     // Title Widget
     Widget title() {
       return Container(
-          margin: const EdgeInsets.only(top: 30),
-          child: Text('Join us and get \nyour next journey',
-              style: blackTextStyle.copyWith(
-                fontSize: 24,
-                fontWeight: semiBold,
-              )));
+        margin: const EdgeInsets.only(top: 30),
+        child: Text('Join us and get \nyour next journey',
+          style: blackTextStyle.copyWith(
+            fontSize: 24,
+            fontWeight: semiBold,
+          ),
+        ),
+      );
     }
 
     // Input Section Widget
@@ -31,13 +33,15 @@ class SignUpPage extends StatelessWidget {
               TextFormField(
                 cursorColor: kBlackColor,
                 decoration: InputDecoration(
-                    hintText: 'John Doe',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(defaultRadius),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                        borderSide: BorderSide(color: kPrimaryColor))),
+                  hintText: 'John Doe',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                    borderSide: BorderSide(color: kPrimaryColor),
+                  ),
+                ),
               ),
             ],
           ),
@@ -56,13 +60,15 @@ class SignUpPage extends StatelessWidget {
               TextFormField(
                 cursorColor: kBlackColor,
                 decoration: InputDecoration(
-                    hintText: 'johndoe@email.com',
-                    border: OutlineInputBorder(
+                  hintText: 'johndoe@email.com',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                  ),
+                  focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(defaultRadius),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                        borderSide: BorderSide(color: kPrimaryColor))),
+                      borderSide: BorderSide(color: kPrimaryColor),
+                  ),
+                ),
               ),
             ],
           ),
@@ -82,13 +88,15 @@ class SignUpPage extends StatelessWidget {
                 obscureText: true,
                 cursorColor: kBlackColor,
                 decoration: InputDecoration(
-                    hintText: 'Password',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(defaultRadius),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                        borderSide: BorderSide(color: kPrimaryColor))),
+                  hintText: 'Password',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                    borderSide: BorderSide(color: kPrimaryColor),
+                  ),
+                ),
               ),
             ],
           ),
@@ -107,13 +115,15 @@ class SignUpPage extends StatelessWidget {
               TextFormField(
                 cursorColor: kBlackColor,
                 decoration: InputDecoration(
-                    hintText: 'Your Hobby',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(defaultRadius),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                        borderSide: BorderSide(color: kPrimaryColor))),
+                  hintText: 'Your Hobby',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                    borderSide: BorderSide(color: kPrimaryColor),
+                  ),
+                ),
               ),
             ],
           ),
@@ -126,7 +136,9 @@ class SignUpPage extends StatelessWidget {
           width: double.infinity,
           height: 55,
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/bonus');
+            },
             style: TextButton.styleFrom(
               backgroundColor: kPrimaryColor,
               shape: RoundedRectangleBorder(
@@ -194,9 +206,9 @@ class SignUpPage extends StatelessWidget {
             horizontal: defaultMargin,
           ),
           children: [
-            title(),
-            inputSection(),
-            tncButton()
+            title(), 
+            inputSection(), 
+            tncButton(),
           ],
         ),
       ),
