@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:airplane_app_bwa/shared/theme.dart';
+import 'package:airplane_app_bwa/ui/widgets/custom_botnav_items.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -26,111 +27,27 @@ class MainPage extends StatelessWidget {
 
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              // Column for Home Icon
-              Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 16),
-                    width: 24,
-                    height: 24,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/icon_home.png'),
-                      ),
-                    ),
-                  ),
-
-                  // Container for Indicator
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: kPrimaryColor,
-                      borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                ],
+            children: const [
+              // Home
+              CustomBotNavItem(
+                imageUrl: 'assets/icon_home.png',
+                isSelected: true,
               ),
 
-              // Column for Transaction Icon
-              Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 16),
-                    width: 24,
-                    height: 24,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/icon_transaction.png'),
-                      ),
-                    ),
-                  ),
-
-                  // Container for Indicator
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: kTransparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                ],
+              // Transaction
+              CustomBotNavItem(
+                imageUrl: 'assets/icon_transaction.png',
               ),
 
-              // Column for CreditCard Icon
-              Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 16),
-                    width: 24,
-                    height: 24,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/icon_creditcard.png'),
-                      ),
-                    ),
-                  ),
-
-                  // Container for Indicator
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: kTransparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                ],
+              // Credit Card
+              CustomBotNavItem(
+                imageUrl: 'assets/icon_creditcard.png',
               ),
-
-              // Column for Settings Icon
-              Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 16),
-                    width: 24,
-                    height: 24,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/icon_setting.png'),
-                      ),
-                    ),
-                  ),
-
-                  // Container for Indicator
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: kTransparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                ],
+              
+              // Settings
+              CustomBotNavItem(
+                imageUrl: 'assets/icon_setting.png',
               ),
-
             ],
           ),
         ),
