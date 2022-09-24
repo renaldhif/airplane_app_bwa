@@ -13,16 +13,17 @@ class BonusPage extends StatelessWidget {
         height: 211,
         padding: EdgeInsets.all(defaultMargin),
         decoration: BoxDecoration(
-            image: const DecorationImage(
-              image: AssetImage('assets/image_card.png'),
+          image: const DecorationImage(
+            image: AssetImage('assets/image_card.png'),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: kPrimaryColor.withOpacity(0.5),
+              blurRadius: 50,
+              offset: const Offset(0, 10),
             ),
-            boxShadow: [
-              BoxShadow(
-                color: kPrimaryColor.withOpacity(0.5),
-                blurRadius: 50,
-                offset: const Offset(0, 10),
-              )
-            ]),
+          ],
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -51,8 +52,10 @@ class BonusPage extends StatelessWidget {
                   height: 24,
                   margin: const EdgeInsets.only(right: 6),
                   decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/icon_plane.png'))),
+                    image: DecorationImage(
+                      image: AssetImage('assets/icon_plane.png'),
+                    ),
+                  ),
                 ),
                 Text(
                   'Pay',
@@ -68,7 +71,7 @@ class BonusPage extends StatelessWidget {
               'Balance',
               style: whiteTextStyle.copyWith(
                 fontSize: 14, 
-                fontWeight: light
+                fontWeight: light,
               ),
             ),
             Text(
@@ -119,7 +122,9 @@ class BonusPage extends StatelessWidget {
         height: 55,
         margin: const EdgeInsets.only(top: 50),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/main');
+          },
           style: TextButton.styleFrom(
             backgroundColor: kPrimaryColor,
             shape: const RoundedRectangleBorder(
