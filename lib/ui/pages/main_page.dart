@@ -1,3 +1,4 @@
+import 'package:airplane_app_bwa/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:airplane_app_bwa/shared/theme.dart';
 import 'package:airplane_app_bwa/ui/widgets/custom_botnav_items.dart';
@@ -7,7 +8,10 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+    Widget buildContent() {
+      return const HomePage();
+    }
+
     // Custom Bottom Navigation Bar Widget
     Widget customBotNav() {
       return Align(
@@ -24,7 +28,6 @@ class MainPage extends StatelessWidget {
             color: kWhiteColor,
             borderRadius: BorderRadius.circular(18),
           ),
-
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [
@@ -43,7 +46,7 @@ class MainPage extends StatelessWidget {
               CustomBotNavItem(
                 imageUrl: 'assets/icon_creditcard.png',
               ),
-              
+
               // Settings
               CustomBotNavItem(
                 imageUrl: 'assets/icon_setting.png',
@@ -57,6 +60,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          buildContent(),
           customBotNav(),
         ],
       ),
