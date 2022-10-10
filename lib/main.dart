@@ -1,4 +1,5 @@
 import 'package:airplane_app_bwa/cubit/page_cubit.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:airplane_app_bwa/ui/pages/splash_page.dart';
 import 'package:airplane_app_bwa/ui/pages/get_started_page.dart';
@@ -7,8 +8,11 @@ import 'package:airplane_app_bwa/ui/pages/bonus_page.dart';
 import 'package:airplane_app_bwa/ui/pages/main_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
