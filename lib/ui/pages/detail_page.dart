@@ -276,7 +276,8 @@ class DetailPage extends StatelessWidget {
                 ),
               ),
             ],
-          ));
+          ),
+        );
     }
 
     return Scaffold(
